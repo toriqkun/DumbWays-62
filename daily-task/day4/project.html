@@ -87,9 +87,11 @@
               <span class="file-name">No file chosen</span>
             </label>
             <input type="file" id="project-image" accept="image/*" />
+            <img id="image-preview" style="max-width: 200px; margin-top: 10px; display: none" />
           </div>
           <div class="submit">
             <button type="submit" onclick="getData(event)">Submit</button>
+            <button type="button" onclick="cancelEdit()" style="display: none">Cancel</button>
           </div>
         </form>
       </div>
@@ -105,4 +107,3 @@
     <script src="controllers.js"></script>
   </body>
 </html>
-
