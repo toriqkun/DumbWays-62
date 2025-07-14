@@ -84,9 +84,11 @@ function getData(e) {
 
     if (editIndex !== null) {
       projects[editIndex] = updatedProject;
+      alert("Project update successfully ✅");
       editIndex = null;
     } else {
       projects.push(updatedProject);
+      alert("Project added successfully ✅");
     }
 
     saveToLocalStorage();
@@ -194,9 +196,13 @@ function cancelEdit() {
 
 // Hapus project berdasarkan index
 function getRemoveData(index) {
+  const confirmDelete = confirm("Apakah kamu yakin ingin menghapus project ini?");
+  if (!confirmDelete) return;
+
   projects.splice(index, 1);
   saveToLocalStorage();
   renderCards();
+  alert("Project berhasil dihapus ✅");
 }
 
 // Reset Form Project
