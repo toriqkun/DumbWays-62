@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="app.css" />
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Link Font Awesome -->
+    <script src="https://kit.fontawesome.com/3da398904a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="beetwen">
+        <div class="left">
+          <img src="img/brandred.png" alt="Logo" />
+          <ul class="link-nav">
+            <li><a href="portofolio.html" class="home">Home</a></li>
+            <li><a href="project.html" class="myproject">My Project</a></li>
+          </ul>
+        </div>
+        <a href="contact.html" class="kontak"><button class="right">Contact Me</button></a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="menu" id="mobile-menu">
+      <div class="close">
+        <img src="img/brandred.png" alt="DumbWays" />
+        <div class="close-menu" onclick=""><i class="fa-solid fa-xmark fa-lg"></i></div>
+      </div>
+      <ul class="menu-link">
+        <li><a href="portofolio.html" class="home">Home</a></li>
+        <li><a href="project.html" class="myproject">My Project</a></li>
+      </ul>
+      <a href="contact.html" class="kontak"><button class="menu-contact">Contact Me</button></a>
+    </div>
+
+    <!-- Form Contact -->
+    <div class="container-contact">
+      <div class="contact-header">
+        <h1>GET IN TOUCH</h1>
+      </div>
+      <div class="contact-form">
+        <form action="">
+          <label for="nama">Name</label>
+          <input type="text" id="nama" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <label for="number">Phone Number</label>
+          <input type="tel" id="number" />
+          <label for="subject">Subject</label>
+          <select name="subject" id="subject">
+            <option value=""></option>
+            <option value="Kritik">Kritik</option>
+            <option value="Saran">Saran</option>
+            <option value="Konsultasi">Konsultasi</option>
+          </select>
+          <label for="message">Your Message</label>
+          <textarea type="text" id="message"></textarea>
+          <div class="form-button">
+            <button type="submit" onclick="getData(event)">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

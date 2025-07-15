@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="app.css" />
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Link Font Awesome -->
+    <script src="https://kit.fontawesome.com/3da398904a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="beetwen">
+        <div class="left">
+          <img src="img/brandred.png" alt="Logo" />
+          <ul class="link-nav">
+            <li><a href="portofolio.html" class="home">Home</a></li>
+            <li><a href="project.html" class="myproject">My Project</a></li>
+          </ul>
+        </div>
+        <a href="contact.html" class="kontak"><button class="right">Contact Me</button></a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="menu" id="mobile-menu">
+      <div class="close">
+        <img src="img/brandred.png" alt="DumbWays" />
+        <div class="close-menu" onclick=""><i class="fa-solid fa-xmark fa-lg"></i></div>
+      </div>
+      <ul class="menu-link">
+        <li><a href="portofolio.html" class="home">Home</a></li>
+        <li><a href="project.html" class="myproject">My Project</a></li>
+      </ul>
+      <a href="contact.html" class="kontak"><button class="menu-contact">Contact Me</button></a>
+    </div>
+
+    <!-- Detail Project -->
+    <div class="container-detail">
+      <h1 id="title">Project Title</h1>
+
+      <div class="project-info">
+        <div class="image-container">
+          <img id="preview-img" src="" alt="Project Image" />
+        </div>
+
+        <div class="info-right">
+          <h2>Duration</h2>
+          <div class="info-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p id="date-range"></p>
+          </div>
+          <div class="info-item">
+            <i class="fa-regular fa-clock"></i>
+            <p id="duration"></p>
+          </div>
+
+          <h2>Technologies</h2>
+          <div id="techs" class="tech-icons"></div>
+        </div>
+      </div>
+
+      <div class="description">
+        <p id="description"></p>
+      </div>
+
+      <div class="back-button">
+        <a href="project.html">← Back to Project List</a>
+      </div>
+    </div>
+
+    <script src="project-detail.js"></script>
+  </body>
+</html>
