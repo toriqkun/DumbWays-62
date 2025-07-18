@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="app.css" />
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Link Font Awesome -->
+    <script src="https://kit.fontawesome.com/3da398904a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <img src="img/brandred.png" alt="DumbWays" width="50" class="brand" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="img/brandred.png" alt="DumbWays" width="50" />
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex align-items-center justify-content-between">
+            <div class="links-nav">
+              <ul class="navbar-nav justify-content-start flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link link-nav" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-nav" href="#">My Project</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contactme d-flex justify-content-center">
+              <a href="" class="callme btn">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Detail Project -->
+    <div class="container-detail">
+      <h1 id="title">Project Title</h1>
+
+      <div class="project-info">
+        <div class="image-container">
+          <img id="preview-img" src="" alt="Project Image" />
+        </div>
+
+        <div class="info-right">
+          <h2>Duration</h2>
+          <div class="info-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p id="date-range"></p>
+          </div>
+          <div class="info-item">
+            <i class="fa-regular fa-clock"></i>
+            <p id="duration"></p>
+          </div>
+
+          <h2>Technologies</h2>
+          <div id="techs" class="tech-icons"></div>
+        </div>
+      </div>
+
+      <div class="description">
+        <p id="description"></p>
+      </div>
+
+      <div class="back-button">
+        <a href="project.html">← Back to Project List</a>
+      </div>
+    </div>
+
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script DETAIL -->
+    <script src="project-detail.js"></script>
+  </body>
+</html>

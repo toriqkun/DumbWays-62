@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="app.css" />
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Link Font Awesome -->
+    <script src="https://kit.fontawesome.com/3da398904a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <img src="img/brandred.png" alt="DumbWays" width="50" class="brand" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="img/brandred.png" alt="DumbWays" width="50" />
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex align-items-center justify-content-between">
+            <div class="links-nav">
+              <ul class="navbar-nav justify-content-start flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link link-nav" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-nav" href="#">My Project</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contactme d-flex justify-content-center">
+              <a href="" class="callme btn">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project -->
+    <div class="container-project d-block mx-auto">
+      <div class="project-header">
+        <h1 class="text-center fw-bold">ADD MY PROJECT</h1>
+      </div>
+      <div class="form-container">
+        <form action="" class="d-flex flex-column">
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" class="input" />
+          <div class="form-inline d-flex justify-content-between">
+            <div class="left d-flex flex-column align-items-start">
+              <label for="start-date">Start Date</label>
+              <input type="date" id="start-date" />
+            </div>
+            <div class="right d-flex flex-column align-items-start">
+              <label for="end-date">End Date</label>
+              <input type="date" id="end-date" />
+            </div>
+          </div>
+          <label for="desc">Description</label>
+          <textarea id="desc" cols="30" rows="5"></textarea>
+          <label style="margin-bottom: 5px">Technologies</label>
+          <div class="checkbox d-flex ms-2">
+            <div class="checkbox-left">
+              <input type="checkbox" id="nodejs" />
+              <label for="nodejs">Node JS</label><br />
+              <input type="checkbox" id="reactjs" />
+              <label for="reactjs">React JS</label>
+            </div>
+            <div class="checkbox-right">
+              <input type="checkbox" id="nextjs" />
+              <label for="nextjs">Next JS</label><br />
+              <input type="checkbox" id="typescript" />
+              <label for="typescript">TypeScript</label>
+            </div>
+          </div>
+          <div class="container-upload">
+            <label for="project-image">Upload Image</label>
+            <label for="project-image" class="custom-file-upload">
+              <span class="upload-btn">Choose File</span>
+              <span class="file-name">No file chosen</span>
+            </label>
+            <input type="file" id="project-image" accept="image/*" />
+            <img id="image-preview" style="max-width: 200px; margin-top: 10px; display: none" />
+          </div>
+          <div class="submit text-end">
+            <button type="submit" onclick="getData(event)">Submit</button>
+            <button type="button" onclick="cancelEdit()" style="display: none">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="project-section" class="project-section" style="display: none; background-color: white; padding: 30px 0 50px">
+      <div class="container-addproject">
+        <h2>MY PROJECT</h2>
+        <div id="cardContainer"></div>
+      </div>
+    </div>
+
+    <!-- Script COntrollers -->
+    <script src="controllers.js"></script>
+    <!-- Script Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
